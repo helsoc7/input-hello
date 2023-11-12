@@ -55,12 +55,12 @@
       "name": "create a script with STDIN of name",
       "feedback": "The script does not seem to have an input for the name. Please use the read function.",
       "urls": [
-        ""
+        "https://linuxize.com/post/bash-read/"
       ],
       "keywords": [
         "bash",
-        "echo",
-        "stdout",
+        "read",
+        "stdin",
         "linux"
       ],
       "type": "",
@@ -75,18 +75,83 @@
         "title": "Ergänze das Bash-Skript um eine Ausgabe des Namens. Gib dabei \"Hello NAME\" aus."
       },
       "name": "add the output for the hello name",
-      "feedback": "The script does not seem to have an output with hello and the name.",
+      "feedback": "The script does not seem to have an output with hello and the name that should have been entered.",
       "urls": [
-        ""
+        "https://phlow.de/magazin/terminal/echo/"
       ],
       "keywords": [
         "bash",
         "echo",
-        "stdout",
-        "linux"
+        "variable",
+        "linux",
+        "stdout"
       ],
       "type": "",
       "run": "bash input.sh",
+      "file": "",
+      "input": "test",
+      "output": "Hello test",
+      "comparison": "exact",
+      "points": 5,
+      "timeout": 1
+    },
+    {
+      "specs": {
+        "title": "Erstelle eine Python-Datei input.py"
+      },
+      "name": "add the python file.",
+      "feedback": "Please add a python file with the name input.py",
+      "urls": [
+      ],
+      "keywords": [
+        "python",
+        "file"
+      ],
+      "type": "",
+      "run": "test -f input.py",
+      "file": "",
+      "output": "",
+      "comparison": "",
+      "points": 5,
+      "timeout": 1
+    },
+    {
+      "specs": {
+        "title": "Fordere eine Eingabe mithilfe der input-Funktion und speichere sie in einer Variablen zwischen"
+      },
+      "name": "save the input in a variable",
+      "feedback": "The script does not seem to have an input function. Please add one and save it into a variable",
+      "urls": [
+        "https://www.python-kurs.eu/python3_eingabe.php"
+      ],
+      "keywords": [
+        "python",
+        "input",
+        "variable"
+      ],
+      "type": "",
+      "run": "python input.py",
+      "file": "",
+      "input": "test",
+      "points": 5,
+      "timeout": 1
+    },
+    {
+      "specs": {
+        "title": "Ergänze das Python-Skript um eine Ausgabe des Namens. Gib dabei \"Hello NAME\" aus."
+      },
+      "name": "add the output for the hello name",
+      "feedback": "The script does not seem to have an output with hello and the name that should have been entered.",
+      "urls": [
+        "https://www.w3schools.com/python/ref_func_print.asp"
+      ],
+      "keywords": [
+        "python",
+        "print",
+        "variable"
+      ],
+      "type": "",
+      "run": "python input.py",
       "file": "",
       "input": "test",
       "output": "Hello test",
