@@ -6,10 +6,10 @@
   "tests": [
     {
       "specs": {
-        "title": "Erstelle ein mini.sh Datei"
+        "title": "Erstelle ein input.sh Datei"
       },
-      "name": "checking for mini.sh script",
-      "feedback": "mini.sh script could not be found",
+      "name": "checking for input.sh script",
+      "feedback": "input.sh script could not be found",
       "urls": [
         "https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger/"
       ],
@@ -19,7 +19,7 @@
         "linux"
       ],
       "type": "",
-      "run": "test -f mini.sh",
+      "run": "test -f input.sh",
       "file": "",
       "output": "",
       "comparison": "",
@@ -41,21 +41,21 @@
         "linux"
       ],
       "type": "",
-      "run": "grep -q '^#!/bin/bash' mini.sh",
+      "run": "grep -q '^#!/bin/bash' input.sh",
       "file": "",
       "output": "",
       "comparison": "",
       "points": 5,
-      "timeout": 120
+      "timeout": 1
     },
     {
       "specs": {
-        "title": "Schreibe das Skript so, dass es \"Hello World\" auf STDOUT ausgibt"
+        "title": "Schreibe das Bash-Skript. Dabei soll eine Eingabe von STDIN erfolgen, in der der Name eingegeben werden soll. "
       },
-      "name": "create a script that prints \"Hello World\"",
-      "feedback": "The script is not printing \"Hello World\". Please check the script",
+      "name": "create a script with STDIN of name",
+      "feedback": "The script does not seem to have an input for the name. Please use the read function.",
       "urls": [
-        "https://www.cyberciti.biz/faq/hello-world-bash-shell-script/"
+        ""
       ],
       "keywords": [
         "bash",
@@ -64,12 +64,35 @@
         "linux"
       ],
       "type": "",
-      "run": "bash mini.sh",
+      "run": "bash input.sh",
       "file": "",
-      "output": "Hello World",
+      "input": "test",
+      "points": 5,
+      "timeout": 1
+    },
+    {
+      "specs": {
+        "title": "Ergänze das Bash-Skript um eine Ausgabe des Namens. Gib dabei \"Hello NAME\" aus."
+      },
+      "name": "add the output for the hello name",
+      "feedback": "The script does not seem to have an output with hello and the name.",
+      "urls": [
+        ""
+      ],
+      "keywords": [
+        "bash",
+        "echo",
+        "stdout",
+        "linux"
+      ],
+      "type": "",
+      "run": "bash input.sh",
+      "file": "",
+      "input": "test",
+      "output": "Hello test",
       "comparison": "exact",
       "points": 5,
-      "timeout": 120
+      "timeout": 1
     }
   ]
 }
