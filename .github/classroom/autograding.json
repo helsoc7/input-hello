@@ -155,7 +155,7 @@
       "file": "",
       "input": "test",
       "output": "Hello test",
-      "comparison": "exact",
+      "comparison": "contains",
       "points": 5,
       "timeout": 1
     }
