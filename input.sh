@@ -1,6 +1,3 @@
 #!/bin/bash
-echo "Gib deinen Namen ein:"
-read name
-
-echo "Hello $name"
-
+read -p "Bitte gib deinen Namen ein: " NAME
+echo "Hello $NAME"
