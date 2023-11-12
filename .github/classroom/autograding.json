@@ -158,6 +158,140 @@
       "comparison": "contains",
       "points": 5,
       "timeout": 1
-    }
+    },
+    {
+      "specs": {
+        "title": "Erstelle eine input.html-Datei",
+        "list": "Erstelle ein Formular mit der ID \"inputform\" im Body der html-Datei"
+      },
+      "name": "add the html file input.html",
+      "feedback": "There is the input.html file missing.",
+      "urls": [
+        ""
+      ],
+      "keywords": [
+        "html",
+        "file",
+        "form",
+        "id",
+        "body"
+      ],
+      "type": "",
+      "javascript": "document.querySelectorAll('body form#inputform').length >= 1 ? 'true' : 'false';",
+      "file": "input.html",
+      "output": "true",
+      "comparison": "exact",
+      "points": 5,
+      "timeout": 1
+    },
+    {
+      "specs": {
+        "title": "Füge eine action und ein method Attribut in dem Form hinzu",
+        "list": ["Die Action soll auf \"/\" weiterleiten.",
+        "Die Methode soll auf Post gesetzt werden"
+      ]
+      },
+      "name": "add the action and method attribute",
+      "feedback": "The action and method attribute are missing. Check them",
+      "urls": [
+        ""
+      ],
+      "keywords": [
+        "html",
+        "action",
+        "form",
+        "method",
+        "post"
+      ],
+      "type": "",
+      "javascript": "document.querySelector('body form#inputform').getAttribute('method').toUpperCase()=='POST' && document.querySelector('body form#inputform').getAttribute('action')=='/';",
+      "file": "input.html",
+      "output": "true",
+      "comparison": "exact",
+      "points": 5,
+      "timeout": 1
+    },
+    {
+      "specs": {
+        "title": "Erstelle ein Fieldset mit der Legende, die den Namen 'Eingabe' enthält"
+      },
+      "name": "add the fieldset with legend 'eingabe'",
+      "feedback": "The fieldset with legend 'eingabe' is missing",
+      "urls": [
+        ""
+      ],
+      "keywords": [
+        "html",
+        "fieldset",
+        "legend"
+      ],
+      "type": "",
+      "javascript": "(function() { var fieldset = document.querySelector('fieldset'); var legend = fieldset ? fieldset.querySelector('legend') : null; return legend && legend.textContent === 'Eingabe'; })()",
+      "file": "input.html",
+      "output": "true",
+      "comparison": "exact",
+      "points": 5,
+      "timeout": 1
+    },
+    {
+      "specs": {
+        "title": "Erstelle ein input-Feld mit Typisierung für ein Textfeld"
+      },
+      "name": "add the input field with type text",
+      "feedback": "The input field with its type text is missing",
+      "urls": [
+        ""
+      ],
+      "keywords": [
+        "html",
+        "input",
+        "type",
+        "text"
+      ],
+      "type": "",
+      "javascript": "document.querySelectorAll('input[type=text]').length == 1",
+      "file": "input.html",
+      "output": "true",
+      "comparison": "exact",
+      "points": 5,
+      "timeout": 1
+    },
+    {
+      "specs": {
+        "title": "Schreibe ein Label für das Eingabefeld"
+      },
+      "name": "add a label for the input field",
+      "feedback": "The label for the input field is missing",
+      "urls": [
+        ""
+      ],
+      "keywords": [
+        "html",
+        "label"
+      ],
+      "type": "",
+      "javascript": "document.querySelectorAll('label').length == 1",
+      "file": "input.html",
+      "output": "true",
+      "comparison": "exact",
+      "points": 5,
+      "timeout": 1
+    },
+    {
+      "specs": {
+        "title": "Füge einen Submit-Button in das Formular hinzu"
+      },
+      "name": "Füge einen Submit-Button in das Formular hinzu",
+      "feedback": "Your form does not have a submit button. Please include an input with type 'submit' or a button with type 'submit'.",
+      "urls": [
+        "https://www.w3schools.com/tags/att_input_type_submit.asp"
+      ],
+      "keywords": ["html", "input", "submit"],
+      "file": "input.html",
+      "javascript": "document.querySelectorAll('input[type=submit], button[type=submit]').length >= 1",
+      "output": "true",
+      "comparison": "exact",
+      "points": 10
+    },
   ]
 }
