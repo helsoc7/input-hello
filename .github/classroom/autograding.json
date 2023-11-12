@@ -1,6 +1,6 @@
 {
   "repo": "helsoc7/input-hello",
-  "maxTestIndex": 4,
+  "maxTestIndex": 5,
   "incrementalPassRequired": true,
   "testLimit": 13,
   "introduction": "In dieser ersten kleinen Mini-Aufgabe erstellt ihr ein Skript, das Hello World ausgibt. \n Folgt den Anweisungen. Unter Hilfe findet ihr Links, die mit dem Wort Spickzettel markiert sind. Drückt diese bei Bedarf, falls ihr nicht weiterkommt. \n",
@@ -104,8 +104,7 @@
       },
       "name": "add the python file.",
       "feedback": "Please add a python file with the name input.py",
-      "urls": [
-      ],
+      "urls": [],
       "keywords": [
         "python",
         "file"
@@ -190,9 +189,10 @@
     {
       "specs": {
         "title": "Füge eine action und ein method Attribut in dem Form hinzu",
-        "list": ["Die Action soll auf \"/\" weiterleiten.",
-        "Die Methode soll auf Post gesetzt werden"
-      ]
+        "list": [
+          "Die Action soll auf \"/\" weiterleiten.",
+          "Die Methode soll auf Post gesetzt werden"
+        ]
       },
       "name": "add the action and method attribute",
       "feedback": "The action and method attribute are missing. Check them",
@@ -289,7 +289,11 @@
       "urls": [
         "https://www.w3schools.com/tags/att_input_type_submit.asp"
       ],
-      "keywords": ["html", "input", "submit"],
+      "keywords": [
+        "html",
+        "input",
+        "submit"
+      ],
       "file": "input.html",
       "javascript": "document.querySelectorAll('input[type=submit], button[type=submit]').length >= 1",
       "output": "true",
