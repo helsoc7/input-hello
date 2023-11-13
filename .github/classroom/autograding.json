@@ -1,7 +1,7 @@
 {
   "repo": "helsoc7/input-hello",
   "maxTestIndex": 100,
-  "incrementalPassRequired": true,
+  "incrementalPassRequired": false,
   "testLimit": 100,
   "introduction": "In dieser ersten kleinen Mini-Aufgabe erstellt ihr ein Skript, das Hello World ausgibt. \n Folgt den Anweisungen. Unter Hilfe findet ihr Links, die mit dem Wort Spickzettel markiert sind. Drückt diese bei Bedarf, falls ihr nicht weiterkommt. \n",
   "logo_url": "https://www.computerhope.com/jargon/s/standard-input.png",
