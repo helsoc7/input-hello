@@ -299,6 +299,253 @@
       "output": "true",
       "comparison": "exact",
       "points": 10
+    },
+    {
+      "specs": {
+        "title": "Erstelle eine jinja.py-Datei und eine requirements.txt im Stammverzeichnis des Repositories. Außerdem soll eine template.jinja2-Datei im zu erstellenden Unterverzeichnis templates erstellt werden"
+      },
+      "name": "checking for files: jinja.py, requirements.txt, templates/template.jinja2",
+      "feedback": "required files could not be found (check your file and directory names)",
+      "urls": [
+        ""
+      ],
+      "keywords": [
+        "python",
+        "create script",
+        "requirements.txt"
+      ],
+      "run": "test -d templates && test -f jinja.py && test -f requirements.txt && test -f templates/template.jinja2",
+      "output": "true",
+      "comparison": "exact",
+      "points": 10
+    },
+    {
+      "specs": {
+        "title": "Erzeuge eine .gitignore Datei mit dem Eintrag myenv"
+      },
+      "name": "checking for size and contents of files: .gitignore",
+      "feedback": ".gitignore must not be empty and contain myenv entry",
+      "urls": [
+        "https://git-scm.com/docs/gitignore",
+        "https://www.atlassian.com/de/git/tutorials/saving-changes/gitignore",
+        "https://www.toptal.com/developers/gitignore"
+      ],
+      "keywords": [
+        "git",
+        "gitignore"
+      ],
+      "type": "",
+      "run": "test -s .gitignore && grep -i myenv .gitignore",
+      "points": 5,
+      "timeout": 10
+    },
+    {
+      "specs": {
+        "title": "jinja.py sollte jinja2 importieren, requirements.txt sollte jinja2 beinhalten, templates/template.jinja2 sollte ein Template enthalten mit einer name Variable."
+      },
+      "name": "checking for size of files: demo.py, requirements.txt, templates/template.jinja2",
+      "feedback": "required files must not be empty (check your files)",
+      "urls": [
+        "https://code.visualstudio.com/docs/getstarted/tips-and-tricks"
+      ],
+      "keywords": [
+        "vscode",
+        "create file",
+        "create folder"
+      ],
+      "type": "",
+      "run": "test -d templates && test -s demo.py && test -s requirements.txt && test -s templates/template.jinja2",
+      "points": 15,
+      "timeout": 10
+    },
+    {
+      "specs": {
+        "title": "requirements.txt muss die Abhängigkeit für die Templating Engine enthalten"
+      },
+      "name": "checking for jinja dependency in requirements.txt",
+      "feedback": "Jinja2 seems to be missing (check your requirements.txt file)",
+      "urls": [
+        "https://pypi.org/project/Jinja2/",
+        "https://jinja.palletsprojects.com/en/3.0.x/intro/"
+      ],
+      "keywords": [
+        "python",
+        "requirements.txt",
+        "jinja2"
+      ],
+      "type": "",
+      "run": "test -s requirements.txt && pip install -r requirements.txt && pip list | grep -i jinja2",
+      "output": "",
+      "points": 5,
+      "timeout": 10
+    },
+    {
+      "specs": {
+        "title": "Erzeuge ein Bash Sript namens env.sh mit dem entsprechenden shebang, das ein Python venv namens myenv erzeugt (ohne es zu aktivieren)."
+      },
+      "name": "checking for size and contents of files: myenv",
+      "feedback": "myenv must not be empty and contain virtual environment",
+      "urls": [
+        "https://linuxhandbook.com/run-shell-script/",
+        "https://docs.python.org/3/library/venv.html",
+        "https://python.land/virtual-environments/virtualenv"
+      ],
+      "keywords": [
+        "python",
+        "venv"
+      ],
+      "type": "",
+      "run": "test -s env.sh && bash env.sh && test -d myenv && test -s myenv/bin/activate && . myenv/bin/activate && python -c 'import sys; exit(0 if \"myenv\" in sys.prefix else 1)'",
+      "points": 10,
+      "timeout": 10
+    },
+    {
+      "specs": {
+        "title": "Stelle sicher, dass das Template template.jinja2 im Unterverzeichnis templates/ eine Standard Jinja2-Variable namens variable enthält und die folgende Zeichenkette vor der Variable ausgibt:\n   Grüße aus Kurs:"
+      },
+      "name": "create a jinja2 template to generate the required output and substitute the course variable",
+      "feedback": "The template does not seem correct. Please check the script",
+      "urls": [
+        "https://jinja.palletsprojects.com/en/3.0.x/intro/",
+        "https://ttl255.com/jinja2-tutorial-part-1-introduction-and-variable-substitution/",
+        "https://ttl255.com/jinja2-tutorial-part-1-introduction-and-variable-substitution/#var-sub-ex-python"
+      ],
+      "keywords": [
+        "python",
+        "jinja2",
+        "example",
+        "template file"
+      ],
+      "type": "",
+      "run": "grep 'Grüße aus Kurs:.*{{ *course *}}' templates/template.jinja2",
+      "file": "",
+      "output": "",
+      "comparison": "",
+      "points": 5,
+      "timeout": 20
+    },
+    {
+      "specs": {
+        "title": "Schreibe das demo.py Skript so, dass es ein Jinja2 Template namens template.jinja2 aus dem Unterverzeichnis templates lädt. Hierfür musst Du die entsprechenden Importe machen. Importiere mit einem einzigen import statement."
+      },
+      "name": "checking for required imports",
+      "feedback": "The script is not importing Environment/FileSystemLoader. Please check the script",
+      "urls": [
+        "https://jinja.palletsprojects.com/en/3.0.x/intro/",
+        "https://zetcode.com/python/jinja",
+        "https://stackoverflow.com/a/38642558"
+      ],
+      "keywords": [
+        "python",
+        "import",
+        "jinja2",
+        "Environment",
+        "FileSystemLoader",
+        "example"
+      ],
+      "type": "PYTHONAST",
+      "run": "/Module/body/ImportFrom[names/alias[@name='Environment'] and names/alias[@name='FileSystemLoader']]",
+      "file": "jinja.py",
+      "output": "",
+      "comparison": "",
+      "points": 5,
+      "timeout": 20
+    },
+    {
+      "specs": {
+        "title": "Benutze die Jinja2 Imports zum Einrichten von Templating"
+      },
+      "name": "checking for calls to Environment/FileSystemLoader",
+      "feedback": "The script is not calling Environment/FileSystemLoader. Please check the script",
+      "urls": [
+        "https://jinja.palletsprojects.com/en/3.0.x/intro/",
+        "https://pypi.org/project/Jinja2/"
+      ],
+      "keywords": [
+        "python",
+        "instantiate",
+        "jinja2",
+        "Environment",
+        "FileSystemLoader"
+      ],
+      "type": "",
+      "run": "pyastgrep \".//Call[func/Name[@id='Environment']]\" && pyastgrep \".//Call[func/Name[@id='FileSystemLoader']]\" demo.py",
+      "file": "",
+      "output": "",
+      "comparison": "",
+      "points": 5,
+      "timeout": 20
+    },
+    {
+      "specs": {
+        "title": "Rufe die nötigen Methoden auf, um das template zu laden"
+      },
+      "name": "checking for calls to required method",
+      "feedback": "The script is not calling the get_template() method. Please check the script",
+      "urls": [
+        "https://jinja.palletsprojects.com/en/3.0.x/intro/"
+      ],
+      "keywords": [
+        "python",
+        "get_template()",
+        "jinja2"
+      ],
+      "type": "PYTHONAST",
+      "run": ".//Call[func/Attribute[@attr='get_template']]",
+      "file": "jinja.py",
+      "output": "",
+      "comparison": "",
+      "points": 5,
+      "timeout": 20
+    },
+    {
+      "specs": {
+        "title": "Rufe die nötigen Methode auf, um das template zu rendern"
+      },
+      "name": "checking for calls to required method",
+      "feedback": "The script is not calling the render() method. Please check the script",
+      "urls": [
+        "https://jinja.palletsprojects.com/en/3.0.x/intro/"
+      ],
+      "keywords": [
+        "python",
+        "render",
+        "jinja2",
+        "template"
+      ],
+      "type": "PYTHONAST",
+      "run": ".//Call[func/Attribute[@attr='render']]",
+      "file": "jinja.py",
+      "output": "",
+      "comparison": "",
+      "points": 5,
+      "timeout": 20
+    },
+    {
+      "specs": {
+        "title": "Schreibe das Skript so, dass es ein Jinja2 Template namens template.jinja2 aus dem Unterverzeichnis templates lädt und die Template-Variable name substituiert mit einer Zeichenkette, die eingegeben wird. Das entsprechende template wird dann via STDOUT ausgegeben."
+      },
+      "name": "create a script to generate the required output",
+      "feedback": "The script is not printing the required output. Please check the script",
+      "urls": [
+        "https://jinja.palletsprojects.com/en/3.0.x/intro/",
+        "https://ttl255.com/jinja2-tutorial-part-1-introduction-and-variable-substitution/"
+      ],
+      "keywords": [
+        "python",
+        "jinja2",
+        "example",
+        "template file"
+      ],
+      "type": "",
+      "dependsOnAll": true,
+      "run": "python3 jinja.py",
+      "file": "",
+      "input": "test",
+      "output": "Hallo test",
+      "comparison": "contains",
+      "points": 5,
+      "timeout": 20
     }
   ]
 }
