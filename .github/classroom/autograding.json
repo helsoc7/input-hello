@@ -417,7 +417,7 @@
         "template file"
       ],
       "type": "",
-      "run": "grep 'Hallo:.*{{ *name *}}' templates/template.jinja2",
+      "run": "grep 'Hallo.*{{ *name *}}' templates/template.jinja2",
       "file": "",
       "output": "",
       "comparison": "",
