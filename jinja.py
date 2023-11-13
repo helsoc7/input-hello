@@ -7,7 +7,8 @@ env = Environment(loader=FileSystemLoader('templates'))
 template = env.get_template('template.jinja2')
 
 # Render the template with the variable
-output = template.render(name=input("Bitte gib deinen Namen ein:"))
+name = input("Bitte gib deinen Namen ein:")
+output = template.render(name)
 
 
 #print("Grüße aus Kurs:AWS 23/07")
