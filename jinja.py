@@ -10,4 +10,4 @@ template = env.get_template('template.jinja2')
 output = template.render(name=input("Bitte gib deinen Namen ein:"))
 
 
-print("Grüße aus Kurs:AWS 23/07")
+#print("Grüße aus Kurs:AWS 23/07")

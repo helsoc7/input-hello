@@ -354,7 +354,7 @@
         "create folder"
       ],
       "type": "",
-      "run": "test -d templates && test -s demo.py && test -s requirements.txt && test -s templates/template.jinja2",
+      "run": "test -d templates && test -s jinja.py && test -s requirements.txt && test -s templates/template.jinja2",
       "points": 15,
       "timeout": 10
     },
@@ -417,7 +417,7 @@
         "template file"
       ],
       "type": "",
-      "run": "grep 'Grüße aus Kurs:.*{{ *course *}}' templates/template.jinja2",
+      "run": "grep 'Hallo:.*{{ *name *}}' templates/template.jinja2",
       "file": "",
       "output": "",
       "comparison": "",
@@ -469,7 +469,7 @@
         "FileSystemLoader"
       ],
       "type": "",
-      "run": "pyastgrep \".//Call[func/Name[@id='Environment']]\" && pyastgrep \".//Call[func/Name[@id='FileSystemLoader']]\" demo.py",
+      "run": "pyastgrep \".//Call[func/Name[@id='Environment']]\" && pyastgrep \".//Call[func/Name[@id='FileSystemLoader']]\" jinja.py",
       "file": "",
       "output": "",
       "comparison": "",
